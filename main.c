@@ -18,18 +18,16 @@ main(int argc, char *argv[])
 		
 		memcpy(ptr, "hello", 6);
 		printf("CloudCam:ÖÜÑÓ¾ü\n");	
+			
 
 		void *ptr1 = mem->alloc(mem, 1024);
 		memcpy(ptr1, "the", 6);
-		DEBUGP("ptr1 = %s\n", ptr1);	
 
 		void *ptr2 = mem->alloc(mem, 1024);
 		memcpy(ptr2, "world", 6);
-		DEBUGP("ptr2 = %s\n", ptr2);	
 
 		void *ptr3 = mem->alloc(mem, 1024);
 		memcpy(ptr3, "i am", 6);
-		DEBUGP("ptr3 = %s\n", ptr3);	
 
 		void *ptr4 = mem->alloc(mem, 1024);
 		memcpy(ptr4, "linux", 6);
@@ -50,7 +48,7 @@ main(int argc, char *argv[])
 		mem->free(mem, ptr4);
 		ptr4 = NULL;
 
-
+		printf("the end code\n");
 		MEM_release(&mem);
 		
 	}
